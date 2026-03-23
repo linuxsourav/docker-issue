@@ -23,3 +23,16 @@ CentOS changed its direction to CentOS Stream, and the official latest tag was r
 we can run 
 
 ---- docker pull centos:centos7.9.2009 -----
+
+✅ To “open” (interact with) the container
+
+You need to start it with an interactive shell:
+
+---------- docker run -it centos:centos7.9.2009 /bin/bash -----------
+
+What this does:
+-i → interactive
+-t → terminal
+/bin/bash → opens bash shell inside container
+
+👉 Now you will be inside the CentOS container terminal.
