@@ -1,1 +1,1 @@
-docker issue and resolving git issue
+docker issue and resolving issue
