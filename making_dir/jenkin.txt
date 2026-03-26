@@ -7,7 +7,7 @@ You’re getting this error because there is no official image named jenkins:lat
 👉 The correct image is maintained under a different name:
 
 ✅ Use this instead:
-docker run -d -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins:lts
+-------------docker run -d -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins:lts--------------------------
 🔍 Why your command failed
 jenkins:latest ❌ → does not exist
 jenkins/jenkins:lts ✅ → official Jenkins image
@@ -26,6 +26,6 @@ After running:
 
 Open in browser:
 
-http://localhost:8080
+-----------http://localhost:8080---------
 🔐 Get initial admin password
-docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+---------------docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword------------
