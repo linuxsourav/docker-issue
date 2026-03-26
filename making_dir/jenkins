@@ -1,1 +1,32 @@
+this one is not working
+
 docker run -p 8080:8080 -p 50000:50000 -v /your/home:/var/jenkins_home jenkins
+----------------------------------------------------------------------------------------
+
+You’re getting this error because there is no official image named jenkins:latest on Docker Hub.
+
+👉 The correct image is maintained under a different name:
+
+✅ Use this instead:
+docker run -d -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins:lts
+🔍 Why your command failed
+jenkins:latest ❌ → does not exist
+jenkins/jenkins:lts ✅ → official Jenkins image
+
+The image is published by the Jenkins project under the repository:
+
+jenkins/jenkins
+🚀 What the correct command does
+-d → run in background
+-p 8080:8080 → Jenkins web UI
+-p 50000:50000 → agent communication
+--name jenkins → container name
+🌐 Access Jenkins
+
+After running:
+
+Open in browser:
+
+http://localhost:8080
+🔐 Get initial admin password
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
