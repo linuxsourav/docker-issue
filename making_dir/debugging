@@ -1,0 +1,3 @@
+cd /var/jenkins_home/workspace/webapp-free/java-demo-app/target/surefire-reports
+ls
+cat *.txt
